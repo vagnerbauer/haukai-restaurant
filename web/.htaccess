@@ -1,3 +1,4 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
+AuthType Basic
+AuthName "Restricted access"
+AuthUserFile "/haukai-restaurant/.htpasswd"
+Require valid-user
